@@ -1,0 +1,9 @@
+# Ignore Rust build artifacts and target directories (all levels)
+target/
+
+# Ignore Cargo's generated files
+/target/
+**/target/
+
+# Optional: ignore other common generated files
+**/*.rs.bk
