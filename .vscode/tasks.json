@@ -1,0 +1,40 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cargo",
+			"command": "build",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "build",
+			"label": "rust: cargo build (workspace)",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			}
+		},
+		{
+			"type": "cargo",
+			"command": "build",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "build",
+			"label": "rust: cargo build (tokio-async-demo)",
+			"options": {
+				"cwd": "${workspaceFolder}/tokio-async-demo"
+			}
+		},{
+			"type": "cargo",
+			"command": "build",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "build",
+			"label": "rust: cargo build (arc_rwlock_demo)",
+			"options": {
+				"cwd": "${workspaceFolder}/arc_rwlock_demo"
+			}
+		}
+	]
+}
