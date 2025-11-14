@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "tokio-async-demo",
+            "type": "lldb",  // 依赖 lldb 调试器（VS Code 需安装 "CodeLLDB" 插件）
+            "request": "launch",
+            "program": "${workspaceFolder}/tokio-async-demo/target/debug/tokio-async-demo",  // 可执行文件路径（工程名替换为你的）
+            "args": [],  // 程序运行参数（无则留空）
+            "cwd": "${workspaceFolder}",
+            "sourceLanguages": ["rust"],
+            "preLaunchTask": "cargo build",  // 调试前自动编译（避免手动执行 cargo build）
+            "env": {
+                // 关键：Tokio 调试模式，禁用任务窃取优化，确保断点稳定
+                "TOKIO_DEBUG": "1",
+                // 可选：强制单线程运行时（简化异步任务调度，调试更易跟踪）
+                "TOKIO_WORKER_THREADS": "1"
+            },
+            "stopAtEntry": false,  // 是否在程序入口处自动断点（默认关闭）
+            "internalConsoleOptions": "openOnSessionStart",
+            "logging": {
+                "engineLogging": false
+            }
+        }
+    ]
+}
