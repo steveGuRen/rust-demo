@@ -35,6 +35,18 @@
 			"options": {
 				"cwd": "${workspaceFolder}/arc_rwlock_demo"
 			}
+		},
+		{
+			"type": "cargo",
+			"command": "build",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "build",
+			"label": "bubble_sort",
+			"options": {
+				"cwd": "${workspaceFolder}/bubble_sort"
+			}
 		}
 	]
 }
